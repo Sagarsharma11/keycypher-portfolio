@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className={styles.mainContainer}>
       <LandingSection />
-          <LandingSection />
+      <LandingSection />
     </div>
   );
 }
