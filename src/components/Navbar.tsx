@@ -19,7 +19,7 @@ type Props = {}
 
 const NavbarComponent = (props: Props) => {
   return (
-   <Navbar fluid>
+   <Navbar fluid className='bg-black'>
       <NavbarBrand href="https://flowbite-react.com">
         <img src="/assets/images/logo.png" className="mr-3 h-6 sm:h-9 rounded-2xl" alt="Flowbite React Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
