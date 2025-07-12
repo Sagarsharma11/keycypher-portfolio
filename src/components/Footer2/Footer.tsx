@@ -3,13 +3,15 @@ import { RiFlashlightFill } from 'react-icons/ri'; // StackBlitz-like lightning 
 
 const Footer = () => {
   const links = [
-    { label: 'Pricing', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Documentation', href: '#' },
-    { label: 'Help Center', href: '#' },
-    { label: 'Careers', href: '#' },
+    // { label: 'Pricing', href: '#' },
+    // { label: 'Blog', href: '#' },
+    // { label: 'Documentation', href: '#' },
+    // { label: 'Help Center', href: '#' },
+    // { label: 'Careers', href: '#' },
     { label: 'Terms', href: '#' },
-    { label: 'Privacy', href: '#' },
+{ label: 'contact us - Hello@keycypher.com', href: 'mailto:Hello@keycypher.com' }
+
+    // { label: 'Privacy', href: '#' },
   ];
 
   return (
@@ -25,10 +27,10 @@ const Footer = () => {
         ))}
 
         {/* Brand / Logo */}
-        <span className="flex items-center text-white font-semibold space-x-1">
+        {/* <span className="flex items-center text-white font-semibold space-x-1">
           <RiFlashlightFill className="text-yellow-400" size={16} />
           <span>SecureScan</span>
-        </span>
+        </span> */}
       </div>
     </footer>
   );
