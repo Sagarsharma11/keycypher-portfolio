@@ -22,7 +22,7 @@ const NavbarComponent = (props: Props) => {
    <Navbar fluid>
       <NavbarBrand href="https://flowbite-react.com">
         <img src="/assets/images/logo.png" className="mr-3 h-6 sm:h-9 rounded-2xl" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Keycypher</span>
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
       </NavbarBrand>
       <div className="flex md:order-2">
         {/* <Dropdown
@@ -45,13 +45,13 @@ const NavbarComponent = (props: Props) => {
         <NavbarToggle />
       </div>
       <NavbarCollapse>
-        <NavbarLink href="#" active>
+        <NavbarLink href="/" active>
           Home
         </NavbarLink>
         <NavbarLink href="#">About</NavbarLink>
         <NavbarLink href="#">Services</NavbarLink>
         <NavbarLink href="#">Pricing</NavbarLink>
-        <NavbarLink href="#">Contact</NavbarLink>
+        <NavbarLink href="/contact-us">Contact</NavbarLink>
       </NavbarCollapse>
     </Navbar>
 
