@@ -3,14 +3,16 @@ import React from 'react';
 import { FiUploadCloud } from 'react-icons/fi';
 
 const SecureScannerUI = () => {
-  const suggestions = [
-    'Scan for hardcoded secrets',
-    'Check for vulnerable dependencies',
-    'Run OWASP Top 10 analysis',
-    'Audit third-party packages',
-    'Scan for exposed tokens or keys',
-    'Check insecure API usage',
-  ];
+const suggestions = [
+  '✅ Scan for code injection vulnerabilities',
+  '🔐 Check for hardcoded secrets in source code',
+  '🔎 Detect exposed API keys and credentials',
+  '📂 Identify sensitive data exposure risks (e.g., PII, passwords)',
+  '⚠️ Analyze for insecure or outdated imports',
+  '🧠 Flag insecure coding patterns and bad practices',
+  '🛡️ Run automated checks against OWASP Top 10 vulnerabilities',
+];
+
 
   return (
     // <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center px-4">
