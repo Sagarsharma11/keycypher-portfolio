@@ -8,7 +8,7 @@ const Footer = () => {
     // { label: 'Documentation', href: '#' },
     // { label: 'Help Center', href: '#' },
     // { label: 'Careers', href: '#' },
-    { label: 'Terms', href: '#' },
+    { label: 'Terms', href: '/terms' },
 { label: 'contact us - Hello@keycypher.com', href: 'mailto:Hello@keycypher.com' }
 
     // { label: 'Privacy', href: '#' },
