@@ -13,7 +13,9 @@ const SecureScannerUI = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center px-4">
+    // <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center px-4">
+<div className="w-full bg-gray-950 text-white px-4 py-8 flex items-center justify-center flex-col min-h-screen lg:min-h-0 lg:h-full lg:items-center lg:justify-center">
+
       <h1 className="text-4xl md:text-5xl font-bold mb-2 text-center">
         Upload your code for secure scanning
       </h1>
@@ -35,7 +37,7 @@ const SecureScannerUI = () => {
       </div> */}
       <UploadBox/>
 
-      <p className="text-gray-500 mt-6 mb-3">or choose an action below</p>
+      <p className="text-gray-500 mt-6 mb-3">jump into action — scan, secure, succeed</p>
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 w-full max-w-4xl px-4">
         {suggestions.map((label) => (
           <button

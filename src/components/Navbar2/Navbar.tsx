@@ -95,12 +95,14 @@ const Navbar = () => {
 
         {/* Desktop Icons + Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          {/* <FaDiscord className="text-gray-400 hover:text-white cursor-pointer" />
-          <FaLinkedin className="text-gray-400 hover:text-white cursor-pointer" /> */}
-          <FaXTwitter className="text-gray-400 hover:text-white cursor-pointer" />
-          <FaRedditAlien className="text-gray-400 hover:text-white cursor-pointer" />
-          <button className="bg-[#1a1a1a] px-4 py-1 rounded-md">Sign In</button>
-          <button className="bg-blue-600 px-4 py-1 rounded-md">Get Started</button>
+          {/* <FaDiscord className="text-gray-400 hover:text-white cursor-pointer" />*/}
+          <a href=" https://x.com/Thekeycypher" target="_blank" rel="noopener noreferrer">
+            <FaXTwitter className="text-gray-400 hover:text-white cursor-pointer" />
+          </a>
+          <FaLinkedin className="text-gray-400 hover:text-white cursor-pointer" /> 
+          {/* <FaRedditAlien className="text-gray-400 hover:text-white cursor-pointer" /> */}
+          <button className="bg-[#1a1a1a] px-4 py-1 rounded-md cursor-pointer">Sign In</button>
+          <button className="bg-blue-600 px-4 py-1 rounded-md cursor-pointer">Get Started</button>
         </div>
 
         {/* Mobile Toggle */}
@@ -123,10 +125,12 @@ const Navbar = () => {
             </div>
           ))} */}
           <div className="flex items-center gap-4 text-xl mt-2">
-            {/* <FaDiscord />
-            <FaLinkedin /> */}
-            <FaXTwitter />
-            <FaRedditAlien />
+            {/* <FaDiscord />*/}
+            <a href=" https://x.com/Thekeycypher" target="_blank" rel="noopener noreferrer">
+              <FaXTwitter />
+            </a>
+            <FaLinkedin /> 
+            {/* <FaRedditAlien /> */}
           </div>
           <button className="w-full bg-[#1a1a1a] py-2 rounded-md mt-4">Sign In</button>
           <button className="w-full bg-blue-600 py-2 rounded-md cursor-pointer">Get Started</button>
