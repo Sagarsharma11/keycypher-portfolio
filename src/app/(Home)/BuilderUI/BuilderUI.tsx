@@ -1,23 +1,25 @@
+"use client"
+import SecurityModal from '@/components/SecurityModal/SecurityModal';
 import UploadBox from '@/components/UploadBox/UploadBox';
-import React from 'react';
+import React, { useState } from 'react';
 import { FiUploadCloud } from 'react-icons/fi';
 
 const SecureScannerUI = () => {
-const suggestions = [
-  '✅ Scan for code injection vulnerabilities',
-  '🔐 Check for hardcoded secrets in source code',
-  '🔎 Detect exposed API keys and credentials',
-  '📂 Identify sensitive data exposure risks (e.g., PII, passwords)',
-  '⚠️ Analyze for insecure or outdated imports',
-  '🧠 Flag insecure coding patterns and bad practices',
-  '🛡️ Run automated checks against OWASP Top 10 vulnerabilities',
-];
-
+  const suggestions = [
+    '✅ Scan for code injection vulnerabilities',
+    '🔐 Check for hardcoded secrets in source code',
+    '🔎 Detect exposed API keys and credentials',
+    '📂 Identify sensitive data exposure risks (e.g., PII, passwords)',
+    '⚠️ Analyze for insecure or outdated imports',
+    '🧠 Flag insecure coding patterns and bad practices',
+    '🛡️ Run automated checks against OWASP Top 10 vulnerabilities',
+  ];
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     // <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center px-4">
-<div className="w-full bg-gray-950 text-white px-4 py-8 flex items-center justify-center flex-col min-h-screen lg:min-h-0 lg:h-full lg:items-center lg:justify-center">
-
+    <div className="w-full bg-gray-950 text-white px-4 py-8 flex items-center justify-center flex-col min-h-screen lg:min-h-0 lg:h-full lg:items-center lg:justify-center">
+      <SecurityModal isOpen={isOpen} setIsOpen={setIsOpen} />
       <h1 className="text-4xl md:text-5xl font-bold mb-2 text-center">
         Upload your code for secure scanning
       </h1>
@@ -37,7 +39,7 @@ const suggestions = [
           <input type="file" accept=".zip" className="hidden" />
         </label>
       </div> */}
-      <UploadBox/>
+      <UploadBox />
 
       <p className="text-gray-500 mt-6 mb-3">jump into action — scan, secure, succeed</p>
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 w-full max-w-4xl px-4">
@@ -51,7 +53,7 @@ const suggestions = [
         ))}
       </div>
 
-      <button className="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition cursor-pointer">
+      <button onClick={()=>setIsOpen(true)} className="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition cursor-pointer">
         🚀 Get Started
       </button>
     </div>
