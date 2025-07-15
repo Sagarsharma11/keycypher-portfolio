@@ -13,15 +13,18 @@ import {
   FaImages,
 } from 'react-icons/fa6';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
+import SecurityModal from '../SecurityModal/SecurityModal';
 
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = ['Community', 'Enterprise', 'Resources', 'Pricing'];
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="bg-gray-950 text-white px-4 md:px-8 py-3 border-b border-gray-800 relative">
+      <SecurityModal isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         {/* <div className="text-2xl font-bold italic text-white">Keycypher</div>
@@ -99,10 +102,10 @@ const Navbar = () => {
           <a href=" https://x.com/Thekeycypher" target="_blank" rel="noopener noreferrer">
             <FaXTwitter className="text-gray-400 hover:text-white cursor-pointer" />
           </a>
-          <FaLinkedin className="text-gray-400 hover:text-white cursor-pointer" /> 
+          <FaLinkedin className="text-gray-400 hover:text-white cursor-pointer" />
           {/* <FaRedditAlien className="text-gray-400 hover:text-white cursor-pointer" /> */}
-          <button className="bg-[#1a1a1a] px-4 py-1 rounded-md cursor-pointer">Sign In</button>
-          <button className="bg-blue-600 px-4 py-1 rounded-md cursor-pointer">Get Started</button>
+          <button onClick={()=>setIsOpen(true)} className="bg-[#1a1a1a] px-4 py-1 rounded-md cursor-pointer">Sign In</button>
+          <button onClick={()=>setIsOpen(true)} className="bg-blue-600 px-4 py-1 rounded-md cursor-pointer">Get Started</button>
         </div>
 
         {/* Mobile Toggle */}
@@ -129,11 +132,11 @@ const Navbar = () => {
             <a href=" https://x.com/Thekeycypher" target="_blank" rel="noopener noreferrer">
               <FaXTwitter />
             </a>
-            <FaLinkedin /> 
+            <FaLinkedin />
             {/* <FaRedditAlien /> */}
           </div>
-          <button className="w-full bg-[#1a1a1a] py-2 rounded-md mt-4">Sign In</button>
-          <button className="w-full bg-blue-600 py-2 rounded-md cursor-pointer">Get Started</button>
+          <button onClick={()=>setIsOpen(true)} className="w-full bg-[#1a1a1a] py-2 rounded-md mt-4">Sign In</button>
+          <button onClick={()=>setIsOpen(true)} className="w-full bg-blue-600 py-2 rounded-md cursor-pointer">Get Started</button>
         </div>
       )}
     </header>
