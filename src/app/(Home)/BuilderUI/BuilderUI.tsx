@@ -39,7 +39,8 @@ const SecureScannerUI = () => {
           <input type="file" accept=".zip" className="hidden" />
         </label>
       </div> */}
-      <UploadBox />
+
+      <UploadBox setIsOpen={setIsOpen} />
 
       <p className="text-gray-500 mt-6 mb-3">jump into action — scan, secure, succeed</p>
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 w-full max-w-4xl px-4">
